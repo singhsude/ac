@@ -1,0 +1,31 @@
+<div class = "c4"> 
+
+<div class='info'>
+<table style="width:100%" cellspacing="10">
+<tr ng-repeat="c in variable1[0].causes[0].cause" >
+    <td>
+<form ng-submit="viewCause(c.i)">
+<button style="width: 280px; height: 80px;" type="submit"><font color="{{c.color}}">{{c.i}}&nbsp;{{c.title}}<br/>{{c.time}}&nbsp;{{c.chrons[0].e1}}</font>
+</button>
+	</form>
+</td>
+</tr>
+</table>
+</div>
+
+<div style="margin-top: 20%; margin-left: 3%;">
+<table>
+<tr><td>
+<table><tr><td><form role="form" name="form" ng-submit="movel()">
+<button class='bl' type="submit"></button></form></td>
+<td><form  role="form" name="form" ng-submit="mover()">
+<input style="height: 25px; width: 60px;" type="text" name="index" id="index" ng-model="index" />
+<button type="submit" class='br'></button></form></td>
+</div>
+<td>
+<div style="margin-top: 20%; margin-left: 50%;">
+<button class='b3' onclick="location.href='#/5';">
+</button><br/><button class='b5' >
+</div></td>
+</tr></table>
+</div>

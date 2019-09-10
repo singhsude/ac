@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/dark-blue.css">
+
+<link href="style.css" rel="stylesheet" />
+  <script data-require="angular.js@1.3.13" data-semver="1.3.13" src="https://code.angularjs.org/1.3.13/angular.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+  <script src="script.js"></script>
+  <script src="ngStorage.min.js"></script>
+	</head>
+
+  <body ng-app="app">
+
+
+<div class="jumbotron" id="jumbo">
+
+      <div class="container">
+        <div class="col-xs-offset-2 col-xs-8">
+          <div class="screen" ng-view></div>
+        </div>
+      </div>
+
+    </div>
+    
+
+<div class = "nav-menu" ng-app="app">
+
+<div ng-controller="treeController">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+          <a class="navbar-brand" id = "menu" href="#/menu">[==]</a>
+        </div>
+        
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+        </div>
+      </nav>
+    </div>
+</div>
+    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="modules/authentication/services.js"></script>
+    <script src="modules/authentication/controllers.js"></script>
+    <script src="modules/home/controllers.js"></script>
+  </body>
+
+</html>

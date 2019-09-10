@@ -1,0 +1,74 @@
+<div class = "c10">
+<form name="form" ng-submit="method()" role="form">
+<div style="margin-top: 10%; margin-left: 17%;" >
+<table>
+<tr><td><input style="margin-top: 1%; height: 25px; width: 175px;" type="text" name="name" id="name" size="14" value="{{clientname}}" /></td>
+</table>
+</div>
+
+<div style="margin-top: 1%; margin-left: 17%;" >
+<table>
+<tr><td><input type= "text" value="{{clientmob1}}" /></td>
+<td></td>
+</tr>
+<tr><td><input type= "text" value="{{clientmob2}}"/></td>
+<td></td>
+</tr>
+</table>
+</div>
+
+
+<div style="margin-top: 4%; margin-left: 17%;" >
+<table>
+<tr><td><input type= "text" value="{{clientemail1}}"/></td>
+<td></td>
+</tr>
+<tr><td><input type= "text" value="{{clientemail2}}"/></td>
+<td></td>
+</tr>
+</table>
+</div>
+
+
+<div style="margin-top: 5%; margin-left: 17%;" >
+<table>
+<tr><td><input style="height: 60px; width: 165px;" type="text" name="title" id="title" size="14" value="{{clientaddress}}" /></td>
+<td></td>
+</tr>
+<tr><td><div style="margin-top: 4%; height: 60px; width: 165px;" type="text" name="map" id="map" size="14" value="{{clientaddress}}" /></td><td></td></tr>
+<td></td>
+</table>
+</div>
+   
+<script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: 30.733315, lng: 76.779419}
+        });
+
+	var geocoder = new google.maps.Geocoder();
+
+	geocodeAddress(geocoder, map);
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = "modern housing complex, manimajra, chandigarh";
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMIye032ZosNUpnyFed-KKJTs2JogiBic&callback=initMap">
+    </script>
+<p style="position: absolute; top: 80%; left: 35%; right: 1%; bottom: 1%;"><button class='b13' onclick="location.href='#/11';"></button><br/><button class='b14' onclick="location.href='#/7';"></button></p>
+</form>
+</div>

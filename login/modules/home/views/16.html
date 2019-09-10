@@ -1,0 +1,26 @@
+
+<head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<div class = "c16">
+<p style="margin-top: 80%; margin-left: 20%; height: 75px; width: 75px;">
+<button id="download" ng-click="exportToFile()">download</button>
+<!--
+<form method="post" action="http://localhost:8080/temp" enctype="multipart/form-data">
+<input type="file" id="input"><br/>
+<input style="visibility: hidden;" type="text" name="json" id="json" size="14"  ng-model="json" required />
+<button type="submit">upload</button>
+</form>
+-->
+
+<form method='post' action='http://localhost:3030/upload' enctype="multipart/form-data">
+        <input type='file' name='fileUploaded'>
+        <input type='submit'>
+
+
+ <div style="margin-top: -5%;" class="g-savetodrive"
+   data-src="//localhost:8080/temp/json.txt"
+   data-filename="JSON.txt"
+   data-sitename="Leg. Asst.">
+</div> </p></div>
